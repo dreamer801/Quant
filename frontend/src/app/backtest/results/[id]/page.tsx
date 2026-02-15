@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { Layout } from '@/components/common';
 import { EquityCurveChart, TradeTable } from '@/components/Visualization';
@@ -12,11 +12,7 @@ export default function BacktestResultPage() {
   const [result, setResult] = useState<BacktestResult | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loadResult();
-  }, [params.id]);
-
-  const loadResult = async () => {
+  const loadResult = useCallback(async () => {
     try {
       const data = await backtestService.getResult(params.id as string);
       setResult(data);
@@ -25,7 +21,11 @@ export default function BacktestResultPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [params.id]);
+
+  useEffect(() => {
+    loadResult();
+  }, [loadResult]);
 
   if (loading) {
     return (

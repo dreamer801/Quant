@@ -63,7 +63,7 @@ export default function RankingRuleBuilder({
       </div>
 
       {rules.length === 0 && (
-        <p className="text-sm text-gray-500">暂无排名规则，点击"添加规则"开始设置</p>
+        <p className="text-sm text-gray-500">暂无排名规则，点击&nbsp;&quot;添加规则&quot;&nbsp;开始设置</p>
       )}
 
       {rules.map((rule, index) => (
