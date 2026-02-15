@@ -51,6 +51,8 @@ npm install
 npm run dev
 ```
 
+更多 Windows/WSL 本地运行细节以及自动化脚本说明，参看 `docs/local-dev.md` 与 `scripts/dev.ps1`。
+
 ## 项目结构
 
 ```

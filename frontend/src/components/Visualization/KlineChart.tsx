@@ -5,15 +5,10 @@ import { DailyQuote } from '@/types';
 
 interface KlineChartProps {
   data: DailyQuote[];
-  signals?: Array<{
-    date: string;
-    type: 'buy' | 'sell';
-    price: number;
-  }>;
   height?: number;
 }
 
-export default function KlineChart({ data, signals = [], height = 400 }: KlineChartProps) {
+export default function KlineChart({ data, height = 400 }: KlineChartProps) {
   const dates = data.map((d) => d.trade_date);
   const ohlc = data.map((d) => [d.open, d.close, d.low, d.high]);
   const volumes = data.map((d) => d.volume);

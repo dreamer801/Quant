@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { FilterCondition, Operator, LogicOperator, FactorDefinition } from '@/types';
 import { Button, Select } from '@/components/common';
 import Input from '@/components/common/Input';
@@ -71,7 +70,7 @@ export default function FilterConditionBuilder({
       </div>
 
       {conditions.length === 0 && (
-        <p className="text-sm text-gray-500">暂无筛选条件，点击"添加条件"开始设置</p>
+        <p className="text-sm text-gray-500">暂无筛选条件，点击&nbsp;&quot;添加条件&quot;&nbsp;开始设置</p>
       )}
 
       {conditions.map((condition, index) => (

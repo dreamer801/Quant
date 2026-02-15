@@ -3,8 +3,10 @@
  */
 import axios from 'axios';
 
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL ?? '/api';
+
 const apiClient = axios.create({
-  baseURL: '/api',
+  baseURL: apiBaseUrl,
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
