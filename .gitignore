@@ -174,3 +174,11 @@
 *.lz
 *.lzma
 *.iso
+
+# Next.js
+.next/
+out/
+
+# Database
+*.db
+*.sqlite3

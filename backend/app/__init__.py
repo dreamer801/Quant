@@ -1,0 +1,3 @@
+"""
+Quant Investment Platform Backend
+"""
