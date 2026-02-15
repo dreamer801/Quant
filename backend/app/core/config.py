@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     version: str = "0.1.0"
 
     # Database
-    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/quant_platform"
+    database_url: str = "postgresql+asyncpg://postgres:postgres@postgres:5432/quant_platform"
 
     # Data source
     data_source: str = "akshare"  # akshare or tushare
